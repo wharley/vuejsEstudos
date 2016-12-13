@@ -4,9 +4,15 @@ import Vue from 'vue'
 import App from './app/Main.vue'
 import router from './router'
 import store from './vuex'
+import Loader from './plugins/loader'
+
+Vue.use(Loader, store)
 
 /* eslint-disable no-new */
 new Vue({
+  data: {
+    name: 'wharley'
+  },
   router,
   store,
   el: '#app',
